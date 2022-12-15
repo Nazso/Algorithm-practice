@@ -147,15 +147,51 @@
 // console.log(descendingOrder(123456789));  // 987654321)
 
 
-function grow(x){
-    let numbers = 0;
-    // console.log(x)
+// function grow(x){
+//     let numbers = 0;
+//     // console.log(x)
     
-    numbers = x.reduce((a, b) => a * b)
-    return numbers;
+//     numbers = x.reduce((a, b) => a * b)
+//     return numbers;
     
-  }
+//   }
 
-  console.log(grow([1, 2, 3])); //, 6);
-  console.log(grow([4, 1, 1, 1, 4])); //, 16); 
-  console.log(grow([2, 2, 2, 2, 2, 2])); //, 64); 
+//   console.log(grow([1, 2, 3])); //, 6);
+//   console.log(grow([4, 1, 1, 1, 4])); //, 16); 
+//   console.log(grow([2, 2, 2, 2, 2, 2])); //, 64); 
+
+
+  function maxMin(k, arr) {
+    // Write your code here
+    const sortedArr = arr.sort((a, b) => a - b)
+    const newArr = [];
+    let smallest = Infinity;
+
+    sortedArr.forEach((e, i) => {
+        let test = sortedArr[i + k - 1] - e;
+
+        if (test < smallest) {
+            smallest = test;
+        }
+    })
+
+    return smallest;
+
+    // console.log(sortedArr);
+
+    // const one = sortedArr.map((a ) => a - 1335);
+
+    // console.log(one);
+    
+    // for(let i = 0; i < k; i++) {
+    //     newArr.push(sortedArr[i])
+    // }
+    // console.log(newArr);
+    
+    // let diff = Math.max(...newArr) - Math.min(...newArr);
+    
+    // return diff;
+
+}
+
+console.log(maxMin(5, [4504, 1520, 5857, 4094, 4157, 3902, 822, 6643, 2422, 7288, 8245, 9948, 2822, 1784, 7802, 3142, 9739, 5629, 5413, 7232]));
