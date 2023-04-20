@@ -8,9 +8,9 @@
 
 // console.log(x);
 
-let a = 2;
-let b = 4;
+// let a = 2;
+// let b = 4;
 
-a *= a + b * a / 2;
+// a *= a + b * a / 2;
 
-console.log(a);
+// console.log(a);
