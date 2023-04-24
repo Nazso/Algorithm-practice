@@ -162,9 +162,9 @@
 
 
   function maxMin(k, arr) {
-    // Write your code here
+    
     const sortedArr = arr.sort((a, b) => a - b)
-    const newArr = [];
+    // const newArr = [];
     let smallest = Infinity;
 
     sortedArr.forEach((e, i) => {
