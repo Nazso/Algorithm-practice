@@ -164,33 +164,33 @@
   function maxMin(k, arr) {
     
     const sortedArr = arr.sort((a, b) => a - b)
-    // const newArr = [];
-    let smallest = Infinity;
+    const newArr = [];
+    // let smallest = Infinity;
 
-    sortedArr.forEach((e, i) => {
-        let test = sortedArr[i + k - 1] - e;
+    // sortedArr.forEach((e, i) => {
+    //     let test = sortedArr[i + k - 1] - e;
 
-        if (test < smallest) {
-            smallest = test;
-        }
-    })
+    //     if (test < smallest) {
+    //         smallest = test;
+    //     }
+    // })
 
-    return smallest;
+    // return smallest;
 
-    // console.log(sortedArr);
+    console.log(sortedArr);
 
-    // const one = sortedArr.map((a ) => a - 1335);
+    const one = sortedArr.map((a ) => a - 1335);
 
-    // console.log(one);
+    console.log(one);
     
-    // for(let i = 0; i < k; i++) {
-    //     newArr.push(sortedArr[i])
-    // }
-    // console.log(newArr);
+    for(let i = 0; i < k; i++) {
+        newArr.push(sortedArr[i])
+    }
+    console.log(newArr);
     
-    // let diff = Math.max(...newArr) - Math.min(...newArr);
+    let diff = Math.max(...newArr) - Math.min(...newArr);
     
-    // return diff;
+    return diff;
 
 }
 
