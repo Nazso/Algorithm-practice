@@ -4,14 +4,14 @@ function twoSum(numbers, target) {
     
     for(let i = 0; i < numbers.length; i++) {
 
-        for(j = numbers.length - 1; j >= 0; j--) {
+        for(let j = i + 1; j < numbers.length; j++) {
 
             // indexes.push(numbers[i] + numbers[j])
 
-            if(target === numbers[i] + numbers[j]
-                && numbers.indexOf(numbers[i]) !== numbers.indexOf(numbers[j])
-                || numbers.lastIndexOf(numbers[i]) !== numbers.lastIndexOf(numbers[j])) {
+            if(target === numbers[i] + numbers[j]) {
+
                 indexes.push(numbers.indexOf(numbers[i]));
+                indexes.push(numbers.indexOf(numbers[j]));
             }
         }
         
