@@ -177,7 +177,7 @@
 
     // return smallest;
 
-    console.log(sortedArr);
+    // console.log(sortedArr);
 
     const one = sortedArr.map((a ) => a - 1335);
 
